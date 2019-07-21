@@ -9,4 +9,4 @@ In [specaugment paper](https://arxiv.org/abs/1904.08779), time warping is one of
 
 Here, I also provide `time_warp` funtion with dynamic supporting.
 
-The configurations part of `time_warp` funtion is mainly inspired by Time warping part in  [shelling203/SpecAugment](https://github.com/shelling203/SpecAugment/blob/master/SpecAugment/spec_augment_tensorflow.py).
+The configurations part of `source_control_point_locations` and `dest_control_point_locations` in `time_warp` funtion, which is required elements for `sparse_image_warp`, is inspired by [shelling203/SpecAugment](https://github.com/shelling203/SpecAugment/blob/master/SpecAugment/spec_augment_tensorflow.py)
