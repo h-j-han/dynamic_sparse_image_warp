@@ -2,7 +2,8 @@ from dynamic_sparse_image_warp import sparse_image_warp
 import tensorflow as tf
 
 def time_warp(mel_fbanks, W=80):
-  """Time warping using `tf.contrib.image.sparse_image_warp`.
+  """Time warping using dynamic sparse_image_warp
+  instead of `tf.contrib.image.sparse_image_warp`.
   Args:
     mel_fbanks : `[1, tau, v, 1]` float `Tensor`
     W : time warp parameter 
