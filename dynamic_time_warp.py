@@ -20,10 +20,10 @@ def time_warp(mel_fbanks, W=80):
   dest_ctp_loc = tf.stack((tf.to_float(cp), 
                tf.ones_like(cp, dtype=tf.float32) * (tf.to_float(rp) + w)), -1)
   dest_ctp_loc = tf.expand_dims(dest_ctp_loc, 0)
-  mel_fbanks = tf.transpoase(mel_fbanks, perm=[0, 2, 1, 3])
+  mel_fbanks = tf.transpose(mel_fbanks, perm=[0, 2, 1, 3])
   warped_mel_fbanks, _ = sparse_image_warp(mel_fbanks,
                                            source_control_point_locations=src_ctp_loc,
                                            dest_control_point_locations=dest_ctp_loc,
                                            num_boundary_points=1)
-  warped_mel_fbanks = tf.transpoase(warped_mel_fbanks, perm=[0, 2, 1, 3])
+  warped_mel_fbanks = tf.transpose(warped_mel_fbanks, perm=[0, 2, 1, 3])
   return warped_mel_fbanks
